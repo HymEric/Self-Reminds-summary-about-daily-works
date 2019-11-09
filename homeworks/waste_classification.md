@@ -1,6 +1,6 @@
 ## This is a homework in Artificial intelligence to sort garbage.
 
-### Most important: data balance and data pre-processing and the proper model!
+### Most important: first, data balance and data pre-processing, second the proper model!
 
 ### Condition
 - Data: 
@@ -71,7 +71,17 @@
     criterion = nn.CrossEntropyLoss(class_weights).cuda(args.gpu)
 ```
 - Moreover, I changed several models (resnet18, resnet50, and resnet101) setting based on ResNet like batch_size, learing_rate and whether to use pre-trained mode, even the gray-mode training. But all of these can not address the last hating one bad case! It is still 9/10!
-- At last, I realized that I maybe ought to change another sota model to try. The last bad case maybe for the leaning ability is not enough with resnet model. Therefore, I use Xception to re-train with above data balance and data pre-processing. Congratulation! It worked! Do you think of anything?  Yes, yes! The NAS (Neural architecture search), maybe it is the best great method for deep learning!
+- At last, I realized that I maybe ought to change another sota model to try. The last bad case maybe for the leaning ability is not enough with resnet model. Therefore, I use Xception to re-train with above data balance and data pre-processing. Congratulation! It worked, it reach 100% calidation inthe 24 epoch, and pass 10/10! Do you think of anything?  Yes, yes! The NAS (Neural architecture search), maybe it is the best great method for deep learning!
+I paste the last epoch accuracy because I forget to record epoch 24 info and Mob-test accuracy.
+![0](https://github.com/HymEric/Self-Reminds-summary-about-daily-works/blob/master/homeworks/imgs/val-final-accu.jpg)
+![1](https://github.com/HymEric/Self-Reminds-summary-about-daily-works/blob/master/homeworks/imgs/Mob-accu.png)
 
 **Notes: The model architecture is the second important factor after proper datasets operation!**
 
+### See difference of ResNet ans Xception
+
+![resnet](https://github.com/HymEric/Self-Reminds-summary-about-daily-works/blob/master/homeworks/imgs/resnet-block.png)
+
+![xception](https://github.com/HymEric/Self-Reminds-summary-about-daily-works/blob/master/homeworks/imgs/xception-block.png)
+
+From [A Survey of the Recent Architectures of Deep Convolutional Neural Networks](https://arxiv.org/abs/1901.06032)， which is worthy reading.
