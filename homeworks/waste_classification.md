@@ -86,6 +86,6 @@ I paste the last epoch accuracy because I forget to record epoch 24 info and Mob
 
 From [A Survey of the Recent Architectures of Deep Convolutional Neural Networks](https://arxiv.org/abs/1901.06032)， which is worthy reading.
 
-#### Results
+### Results
 congratulation！ 100 ！！！
 ![score](https://github.com/HymEric/Self-Reminds-summary-about-daily-works/blob/master/homeworks/imgs/score.png)
