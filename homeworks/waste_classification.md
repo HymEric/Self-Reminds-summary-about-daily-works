@@ -61,7 +61,7 @@
         batch_size=args.batch_size, shuffle=False,
         num_workers=args.workers, pin_memory=True)
 ```
-- Later, I analyze a lot of condition and it take me many time. First, I check wich class is hard to train, and I found the paper, plastic and metal is not 100% accuracy. Perhaps their images type like color, shape, contrast, illumination is more rice. Surely, the common way to solve this problem is set calss weights. I set the *class_weights* to help hard case converge, like belloe. But it's not very good and the accuracy is also about 95%. Pass 9/10. Oh,no. The last bad case is terrible!
+- Later, I analyze a lot of conditions and it takes many time. First, I check wich class is hard to train, and I found the paper, plastic and metal is not 100% accuracy. Perhaps their images type like color, shape, contrast, illumination is more rice. Surely, the common way to solve this problem is set calss weights. I set the *class_weights* to help hard case converge, like belloe. But it's not very good and the accuracy is also about 95%. Pass 9/10. Oh,no. The last bad case is terrible!
 ```python
 # define loss function (criterion) in pytorch
     # adding class_weight    dict_key={0: 'cardboard', 1: 'glass', 2: 'metal', 3: 'paper', 4: 'plastic', 5: 'trash'}
